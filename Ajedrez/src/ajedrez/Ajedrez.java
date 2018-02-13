@@ -19,6 +19,8 @@ public class Ajedrez {
         
         Torre t1 = new Torre("negra","Torre1");
         t1.pintarPieza();
+        Torre t2 = new Torre ("blanca", "caballito");
+        t2.pintarPieza();
     }
     
 }

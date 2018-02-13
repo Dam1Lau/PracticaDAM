@@ -33,7 +33,7 @@ public class Alfil extends Piezas {
     
     @Override
     public void pintarPieza(){
-        if ("Blanca".equals(this.color))
+        if ("Blanca".compareToIgnoreCase(this.color)==0)
         System.out.println("\u2657");
         else
             System.out.println("\u265D");

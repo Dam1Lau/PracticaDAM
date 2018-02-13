@@ -33,7 +33,7 @@ public class Rey extends Piezas {
     
     @Override
     public void pintarPieza(){
-        if ("Blanca".equals(this.color))
+        if ("Blanca".compareToIgnoreCase(this.color)==0)
         System.out.println("\u2654");
         else
             System.out.println("\u265A");
