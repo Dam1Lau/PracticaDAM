@@ -16,8 +16,9 @@ public class Ajedrez {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Prueba numero Uno");
-        System.out.println("Prueba rama nueva");
+        
+        Torre t1 = new Torre("negra","Torre1");
+        t1.pintarPieza();
     }
     
 }

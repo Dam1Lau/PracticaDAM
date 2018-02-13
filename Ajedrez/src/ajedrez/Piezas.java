@@ -10,8 +10,22 @@ package ajedrez;
  * @author dam1
  */
 public abstract class  Piezas {
-    private String color;
-    private String nombre;
+    protected String color;
+    protected String nombre;
+    
+    //Constructores
+
+    public Piezas() {
+    }
+    /**
+     * Constructor para generar una pieza cualquiera.
+     * @param color - Para ideantificar si la pieza es blanca o negra
+     * @param nombre - Para dar un nombre a la nueva pieza que la identifique
+     */
+    public Piezas(String color, String nombre) {
+        this.color = color;
+        this.nombre = nombre;
+    }
     
     //getset
 
@@ -31,5 +45,17 @@ public abstract class  Piezas {
         this.nombre = nombre;
     }
     
-    
+    // Métodos
+    /**
+     * Método por el que cada pieza nos dirá si puede moverse en el tablero dependiendo de su forma de moverse
+     * y de si tiene otras piezas a su alrededor. Método abstracto que cambiará en cada clase que herede de pieza.
+     * @return true = si se puede mover, false = si tiene otras piezas bloqueando su movimiento.
+     */
+    public abstract boolean puedeMoverse();
+    public abstract void pintarPieza();
+
+    @Override
+    public String toString() {
+        return "Piezas{" + "color=" + color + ", nombre=" + nombre + '}';
+    }  
 }
