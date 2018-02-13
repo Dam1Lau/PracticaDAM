@@ -37,8 +37,11 @@ public class Posicion {
         this.columna = columna;
     }
     ////metodos
-    
-    
+
+    @Override
+    public String toString() {
+        return "Posicion{" + "fila=" + fila + ", columna=" + columna + '}';
+    }
 
     
 }
