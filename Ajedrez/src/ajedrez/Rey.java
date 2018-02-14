@@ -13,12 +13,12 @@ public class Rey extends Piezas {
     //constructores
     
     public Rey() {
-        nombre = "Rey";
+        nombre = "R";
         color = "Blanca";
     }
 
-    public Rey(String color, String nombre) {
-        super(color, nombre);
+    public Rey(String color) {
+        super(color);
     }
     
     //Métodos

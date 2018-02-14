@@ -11,15 +11,30 @@ package ajedrez;
  */
 public class Tablero {
     
-    public static Piezas[][] casillas = new Piezas[8][8];
+    public Piezas[][] casillas = new Piezas[8][8];
     
     //constructor
     public Tablero() {
-        for (int i = 0; i < casillas.length; i++) {  //filas
-            for (int j = 0; j < casillas.length; j++) {  //columnas
-                
-            }
+        casillas[0][0] = new Torre("blanca");
+        casillas[0][1] = new Caballo("blanca");
+        casillas[0][2] = new Alfil("blanca");
+        casillas[0][3] = new Dama("blanca");
+        casillas[0][4] = new Rey("blanca");
+        casillas[0][5] = new Alfil("blanca");
+        casillas[0][6] = new Caballo("blanca");
+        casillas[0][7] = new Torre("blanca");
+        for (int i = 0; i < 8; i++) {
+            casillas[1][i] = new Peon("blanca");
+            casillas[6][i] = new Peon("negra");
         }
+        casillas[7][0] = new Torre("negra");
+        casillas[7][1] = new Caballo("negra");
+        casillas[7][2] = new Alfil("negra");
+        casillas[7][3] = new Dama("negra");
+        casillas[7][4] = new Rey("negra");
+        casillas[7][5] = new Alfil("negra");
+        casillas[7][6] = new Caballo("negra");
+        casillas[7][7] = new Torre("negra");
     }
     
 }

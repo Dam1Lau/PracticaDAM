@@ -13,12 +13,12 @@ public class Peon extends Piezas {
     //constructores
     
     public Peon() {
-        nombre = "Peon";
+        nombre = "P";
         color = "Blanca";
     }
 
-    public Peon(String color, String nombre) {
-        super(color, nombre);
+    public Peon(String color) {
+        super(color);
     }
     
     //Métodos

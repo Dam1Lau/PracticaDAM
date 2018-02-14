@@ -13,12 +13,12 @@ public class Alfil extends Piezas {
     //constructores
     
     public Alfil() {
-        nombre = "Alfil";
+        nombre = "A";
         color = "Blanca";
     }
 
-    public Alfil(String color, String nombre) {
-        super(color, nombre);
+    public Alfil(String color) {
+        super(color);
     }
     
     //Métodos

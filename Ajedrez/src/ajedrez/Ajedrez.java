@@ -17,10 +17,10 @@ public class Ajedrez {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Torre t1 = new Torre("negra","Torre1");
-        t1.pintarPieza();
-        Torre t2 = new Torre ("blanca", "caballito");
-        t2.pintarPieza();
+        
+        Juego j1 = new Juego();
+        j1.pintaTablero();
+        
     }
     
 }
