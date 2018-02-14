@@ -19,7 +19,8 @@ public class Ajedrez {
         
         
         Juego j1 = new Juego();
-        j1.pintaTablero();
+        Tablero tab = new Tablero();
+        tab.pinta();
         
     }
     
