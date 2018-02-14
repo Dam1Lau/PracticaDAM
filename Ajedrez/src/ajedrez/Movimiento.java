@@ -52,10 +52,10 @@ public class Movimiento {
         return false;
     }
     
-    public int saltoHorizontal(){
+    public int numHorizontal(){
         return 9;
     }
-    public int saltoVertical(){
+    public int numVertical(){
         return 9;
     }
 
