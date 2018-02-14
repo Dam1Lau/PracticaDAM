@@ -10,9 +10,9 @@ package ajedrez;
  * @author Laura
  */
 public class Tablero {
-    
+
     public Piezas[][] casillas = new Piezas[8][8];
-    
+
     //constructor
     public Tablero() {
         casillas[0][0] = new Torre("blanca");
@@ -36,5 +36,49 @@ public class Tablero {
         casillas[7][6] = new Caballo("negra");
         casillas[7][7] = new Torre("negra");
     }
+
+    //Metodos
+    /**
+     * Hay pieza: Nos indica que en el lugar especificado del tablero hay una
+     * pieza. SI no hay una pieza en esa casilla, devuelve false.
+     *
+     * @param fila perteneciente al array de piezas llamado casillas.
+     * @param columna pertenecsiente al array casillas.
+     * @return true = si hay una pieza en esa fila y columna, false si está
+     * vacia.
+     */
+    public boolean hayPieza(int fila, int columna) {
+        boolean hay = true;
+        if (casillas[fila][columna] == null) //si la casilla esta a null es que no hay pieza ---> hay pieza = false
+        {
+            hay = false;
+        }
+        return hay;
+    }
+    /**
+     * Hay pieza V2: En la posición introducida por el parametro posicion de tipo/clase Posicion 
+     * comprueba si hay una pieza en ese lugar. 
+     * @param posicion de tipo Posición, compuesto a su vez de dos atributos fila y columna.
+     * @return hay de tipo boolean. Toma el valor true si hay una pieza en ese lugar, y false y está a null.
+     */
+    public boolean hayPieza(Posicion posicion) {
+        boolean hay = true;
+        if (casillas[posicion.getFila()][posicion.getColumna()] == null)
+            hay = false;
+        return hay;
+    }
     
+    public void pinta(){
+        for (int i = 0; i < casillas.length; i++) {
+            for (int j = 0; j < casillas.length; j++) {
+                if(casillas[i][j]!=null)
+                    System.out.print(casillas[i][j].getClass().getSimpleName().charAt(0)+casillas[i][j].getColor().charAt(0));
+                else
+                    System.out.print("  ");
+            }
+            System.out.println("");
+        }
+    
+    }
+
 }
