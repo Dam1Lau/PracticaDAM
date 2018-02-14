@@ -20,11 +20,9 @@ public abstract class  Piezas {
     /**
      * Constructor para generar una pieza cualquiera.
      * @param color - Para ideantificar si la pieza es blanca o negra
-     * @param nombre - Para dar un nombre a la nueva pieza que la identifique
      */
-    public Piezas(String color, String nombre) {
+    public Piezas(String color) {
         this.color = color;
-        this.nombre = nombre;
     }
     
     //getset

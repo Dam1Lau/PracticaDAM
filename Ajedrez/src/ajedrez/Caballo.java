@@ -13,12 +13,12 @@ public class Caballo extends Piezas {
     //constructores
     
     public Caballo() {
-        nombre = "Caballo";
+        nombre = "C";
         color = "Blanca";
     }
 
-    public Caballo(String color, String nombre) {
-        super(color, nombre);
+    public Caballo(String color) {
+        super(color);
     }
     
     //Métodos
