@@ -50,7 +50,7 @@ public abstract class  Piezas {
      * @return true = si se puede mover, false = si tiene otras piezas bloqueando su movimiento.
      */
     public abstract boolean puedeMoverse();
-    public abstract void pintarPieza();
+    public abstract String pintarPieza();
 
     @Override
     public String toString() {

@@ -11,7 +11,7 @@ package ajedrez;
  */
 public class Dama extends Piezas {
     //constructores
-    
+
     public Dama() {
         nombre = "D";
         color = "Blanca";
@@ -20,24 +20,23 @@ public class Dama extends Piezas {
     public Dama(String color) {
         super(color);
     }
-    
+
     //Métodos
-    
     @Override
-    public boolean puedeMoverse(){
-        boolean movimiento=false;
-    
-        
+    public boolean puedeMoverse() {
+        boolean movimiento = false;
+
         return movimiento;
     }
-    
+
     @Override
-    public void pintarPieza(){
-        if ("Blanca".compareToIgnoreCase(this.color)==0)
-        System.out.println("\u2655");
-        else
-            System.out.println("\u265B");
+    public String pintarPieza() {
+        String pieza;
+        if (this.color.compareToIgnoreCase("blanca") == 0) {
+            pieza = "\u2655";
+        } else {
+            pieza = "\u265B";
+        }
+        return pieza;
     }
-
-
 }

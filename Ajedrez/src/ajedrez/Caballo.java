@@ -32,11 +32,13 @@ public class Caballo extends Piezas {
     }
     
     @Override
-    public void pintarPieza(){
-        if ("Blanca".compareToIgnoreCase(this.color)==0)
-        System.out.println("\u2658");
+    public String pintarPieza(){
+        String pieza;
+        if (this.color.compareToIgnoreCase("blanca")==0)
+        pieza = "\u2658";
         else
-            System.out.println("\u265E");
+            pieza = "\u265E";
+        return pieza;
     }
 
 

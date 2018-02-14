@@ -32,11 +32,13 @@ public class Torre extends Piezas {
     }
     
     @Override
-    public void pintarPieza(){
+    public String pintarPieza(){
+        String pieza;
         if (this.color.compareToIgnoreCase("blanca")==0)
-        System.out.println("\u2656");
+        pieza = "\u2656";
         else
-            System.out.println("\u265C");
+            pieza = "\u265C";
+        return pieza;
     }
 
 

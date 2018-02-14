@@ -32,11 +32,13 @@ public class Rey extends Piezas {
     }
     
     @Override
-    public void pintarPieza(){
-        if ("Blanca".compareToIgnoreCase(this.color)==0)
-        System.out.println("\u2654");
+    public String pintarPieza(){
+        String pieza;
+        if (this.color.compareToIgnoreCase("blanca")==0)
+        pieza = "\u2654";
         else
-            System.out.println("\u265A");
+            pieza = "\u265A";
+        return pieza;
     }
 
 

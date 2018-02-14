@@ -55,30 +55,45 @@ public class Tablero {
         }
         return hay;
     }
+
     /**
-     * Hay pieza V2: En la posición introducida por el parametro posicion de tipo/clase Posicion 
-     * comprueba si hay una pieza en ese lugar. 
-     * @param posicion de tipo Posición, compuesto a su vez de dos atributos fila y columna.
-     * @return hay de tipo boolean. Toma el valor true si hay una pieza en ese lugar, y false y está a null.
+     * Hay pieza V2: En la posición introducida por el parametro posicion de
+     * tipo/clase Posicion comprueba si hay una pieza en ese lugar.
+     *
+     * @param posicion de tipo Posición, compuesto a su vez de dos atributos
+     * fila y columna.
+     * @return hay de tipo boolean. Toma el valor true si hay una pieza en ese
+     * lugar, y false y está a null.
      */
     public boolean hayPieza(Posicion posicion) {
         boolean hay = true;
-        if (casillas[posicion.getFila()][posicion.getColumna()] == null)
+        if (casillas[posicion.getFila()][posicion.getColumna()] == null) {
             hay = false;
+        }
         return hay;
     }
-    
-    public void pinta(){
-        for (int i = 0; i < casillas.length; i++) {
+
+    public void pintaTabla() {
+
+    }
+
+    public void pinta() {
+        int num = 8;
+        System.out.println("   _____________________");
+        System.out.println("  |a  b  c d  e f  g  h |");
+        for (int i = 0; i < casillas.length; i++, num--) {
+            System.out.print(num + " |");
             for (int j = 0; j < casillas.length; j++) {
-                if(casillas[i][j]!=null)
-                    System.out.print(casillas[i][j].getClass().getSimpleName().charAt(0)+casillas[i][j].getColor().charAt(0));
-                else
-                    System.out.print("  ");
+                if (casillas[i][j] != null) {
+                    System.out.print(casillas[i][j].pintarPieza() + " ");
+                } else {
+                    System.out.print("\u2003 ");
+                }
             }
-            System.out.println("");
+            System.out.println("|");
         }
-    
+        System.out.println("   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+
     }
 
 }

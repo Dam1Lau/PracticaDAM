@@ -11,7 +11,7 @@ package ajedrez;
  */
 public class Peon extends Piezas {
     //constructores
-    
+
     public Peon() {
         nombre = "P";
         color = "Blanca";
@@ -20,24 +20,24 @@ public class Peon extends Piezas {
     public Peon(String color) {
         super(color);
     }
-    
+
     //Métodos
-    
     @Override
-    public boolean puedeMoverse(){
-        boolean movimiento=false;
-    
-        
+    public boolean puedeMoverse() {
+        boolean movimiento = false;
+
         return movimiento;
     }
-    
-    @Override
-    public void pintarPieza(){
-        if ("Blanca".compareToIgnoreCase(this.color)==0)
-        System.out.println("\u2659");
-        else
-            System.out.println("\u265F");
-    }
 
+    @Override
+    public String pintarPieza() {
+        String pieza;
+        if (this.color.compareToIgnoreCase("blanca") == 0) {
+            pieza = "\u2659";
+        } else {
+            pieza = "\u265F";
+        }
+        return pieza;
+    }
 
 }

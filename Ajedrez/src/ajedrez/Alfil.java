@@ -11,7 +11,7 @@ package ajedrez;
  */
 public class Alfil extends Piezas {
     //constructores
-    
+
     public Alfil() {
         nombre = "A";
         color = "Blanca";
@@ -20,24 +20,23 @@ public class Alfil extends Piezas {
     public Alfil(String color) {
         super(color);
     }
-    
+
     //Métodos
-    
     @Override
-    public boolean puedeMoverse(){
-        boolean movimiento=false;
-    
-        
+    public boolean puedeMoverse() {
+        boolean movimiento = false;
+
         return movimiento;
     }
-    
+
     @Override
-    public void pintarPieza(){
-        if ("Blanca".compareToIgnoreCase(this.color)==0)
-        System.out.println("\u2657");
-        else
-            System.out.println("\u265D");
+    public String pintarPieza() {
+        String pieza;
+        if (this.color.compareToIgnoreCase("blanca") == 0) {
+            pieza = "\u2657";
+        } else {
+            pieza = "\u265D";
+        }
+        return pieza;
     }
-
-
 }
