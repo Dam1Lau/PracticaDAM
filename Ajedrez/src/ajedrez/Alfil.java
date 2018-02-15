@@ -13,12 +13,13 @@ public class Alfil extends Piezas {
     //constructores
 
     public Alfil() {
-        nombre = "A";
+        nombre = "Alfil";
         color = "Blanca";
     }
 
     public Alfil(String color) {
         super(color);
+        nombre = "Alfil";
     }
 
     //Métodos
@@ -39,4 +40,5 @@ public class Alfil extends Piezas {
         }
         return pieza;
     }
+
 }

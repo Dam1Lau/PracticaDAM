@@ -13,12 +13,13 @@ public class Rey extends Piezas {
     //constructores
     
     public Rey() {
-        nombre = "R";
-        color = "Blanca";
+        nombre = "Rey";
+        color = "Blanco";
     }
 
     public Rey(String color) {
         super(color);
+        nombre = "Rey";
     }
     
     //Métodos
@@ -40,6 +41,4 @@ public class Rey extends Piezas {
             pieza = "\u265A";
         return pieza;
     }
-
-
 }

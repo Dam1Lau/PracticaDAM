@@ -30,6 +30,12 @@ public class Ajedrez {
         Posicion posicionTest = new Posicion(2,3);
         p4.ponerPieza(new Dama("negra"), posicionTest);
         j1.pintaMe(p4);
+        System.out.println(p4.buscarPieza(0,0).pintarPieza());
+        System.out.println(p4.buscarPieza(0,0));
+        System.out.println(p4.buscarPieza(7,4));  //los nombres salen con null en todas menos caballo y reina WHY
+        System.out.println(p4.buscarPieza(posicionTest));
+        
+
     }
     
 }

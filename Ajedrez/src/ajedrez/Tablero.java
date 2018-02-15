@@ -72,15 +72,46 @@ public class Tablero {
         }
         return hay;
     }
-    
-    public void ponerPieza(Piezas pieza, int fila, int columna){
+
+    public void ponerPieza(Piezas pieza, int fila, int columna) {
         casillas[fila][columna] = pieza;
     }
-    public void ponerPieza(Piezas pieza,Posicion posicion){
+
+    public void ponerPieza(Piezas pieza, Posicion posicion) {
         casillas[posicion.getFila()][posicion.getColumna()] = pieza;
     }
-    public void quitarPieza(int fila, int columna){
+
+    public void quitarPieza(int fila, int columna) {
         casillas[fila][columna] = null;
+    }
+
+    public void quitarPieza(int fila, Posicion posicion) {
+        casillas[posicion.getFila()][posicion.getColumna()] = null;
+    }
+
+    /**
+     * Ideantifica la pieza que esté en la posición introducida mediante una
+     * fila y columna.
+     *
+     * @param fila - En la que queremos buscar la pieza - de 0 a 7.
+     * @param columna - En la que quieremos buscar la pieza - de 0 a 7 para
+     * nosotros.
+     * @return
+     */
+    public Piezas buscarPieza(int fila, int columna) {
+        return casillas[fila][columna];
+    }
+
+    public Piezas buscarPieza(Posicion posicion) {
+        return casillas[posicion.getFila()][posicion.getColumna()];
+    }
+
+    public void hacerMovimiento(Movimiento movimiento) {
+        //si es valido, esto aun no esta hecho - AÑADIR!
+        Piezas aux = casillas[movimiento.getPosInicial().getFila()][movimiento.getPosInicial().getColumna()];
+        
+        quitarPieza(movimiento.getPosInicial().getFila(),movimiento.getPosInicial().getColumna());
+        ponerPieza(aux,movimiento.getPosFinal().getFila(),movimiento.getPosFinal().getColumna());
     }
 
 }

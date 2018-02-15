@@ -54,6 +54,6 @@ public abstract class  Piezas {
 
     @Override
     public String toString() {
-        return "Piezas{" + "color=" + color + ", nombre=" + nombre + '}';
+        return "Pieza{" + this.getClass().getSimpleName() + " " + color + '}';
     }  
 }

@@ -13,12 +13,13 @@ public class Dama extends Piezas {
     //constructores
 
     public Dama() {
-        nombre = "D";
+        nombre = "Reina";
         color = "Blanca";
     }
 
     public Dama(String color) {
         super(color);
+        nombre = "Reina";
     }
 
     //Métodos

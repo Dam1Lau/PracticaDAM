@@ -13,12 +13,13 @@ public class Torre extends Piezas {
     //constructores
     
     public Torre() {
-        nombre = "T";
-        color = "B";
+        nombre = "Torre";
+        color = "Blanca";
     }
 
     public Torre(String color) {
         super(color);
+        nombre = "Torre";
     }
     
     //Métodos
