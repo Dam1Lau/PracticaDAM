@@ -19,9 +19,17 @@ public class Ajedrez {
         
         
         Juego j1 = new Juego();
-        Tablero tab = new Tablero();
-        tab.pinta();
+        j1.comenzarJuego();
+        System.out.println(j1.toString());
         
+        // pruebas con tablero
+        Tablero p4 = new Tablero();
+        System.out.println(p4.hayPieza(5, 5));
+        p4.ponerPieza(new Caballo(), 5, 5);
+        
+        Posicion posicionTest = new Posicion(2,3);
+        p4.ponerPieza(new Dama("negra"), posicionTest);
+        j1.pintaMe(p4);
     }
     
 }

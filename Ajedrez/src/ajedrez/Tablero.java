@@ -40,7 +40,7 @@ public class Tablero {
     //Metodos
     /**
      * Hay pieza: Nos indica que en el lugar especificado del tablero hay una
-     * pieza. SI no hay una pieza en esa casilla, devuelve false.
+     * pieza. Si no hay una pieza en esa casilla, devuelve false.
      *
      * @param fila perteneciente al array de piezas llamado casillas.
      * @param columna pertenecsiente al array casillas.
@@ -72,28 +72,15 @@ public class Tablero {
         }
         return hay;
     }
-
-    public void pintaTabla() {
-
+    
+    public void ponerPieza(Piezas pieza, int fila, int columna){
+        casillas[fila][columna] = pieza;
     }
-
-    public void pinta() {
-        int num = 8;
-        System.out.println("   _____________________");
-        System.out.println("  |a  b  c d  e f  g  h |");
-        for (int i = 0; i < casillas.length; i++, num--) {
-            System.out.print(num + " |");
-            for (int j = 0; j < casillas.length; j++) {
-                if (casillas[i][j] != null) {
-                    System.out.print(casillas[i][j].pintarPieza() + " ");
-                } else {
-                    System.out.print("\u2003 ");
-                }
-            }
-            System.out.println("|");
-        }
-        System.out.println("   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
-
+    public void ponerPieza(Piezas pieza,Posicion posicion){
+        casillas[posicion.getFila()][posicion.getColumna()] = pieza;
+    }
+    public void quitarPieza(int fila, int columna){
+        casillas[fila][columna] = null;
     }
 
 }

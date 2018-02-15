@@ -37,21 +37,52 @@ public class Juego {
     }
     
     // Métodos 
-    public void comenzarJuego(Tablero tablero){
-    
+    public void comenzarJuego(){
+        System.out.println("***¡Comienza el juego!***");
+        Tablero tab = new Tablero();
+        pintaMe(tab);
     }
-    public void pintaTablero(){
-        for (int i = 0; i < 16; i++) {
-            if(i%2==0)
-                System.out.println("_________________");
-            else if (i==1 || i ==15)
-                System.out.println("T C A D R A C T");
-            else if (i== 3 || i == 13)
-                System.out.println("P P P P P P P P");
-            else
-                System.out.println("                ");
+    
+    public void pintaMe(Tablero tablero) {
+        int num = 1;
+        System.out.println("   a  b  c d  e f  g  h  ");
+        System.out.println("   _____________________");
+        for (int i = 0; i < tablero.casillas.length; i++, num++) {
+            System.out.print(num + " |");
+            for (int j = 0; j < tablero.casillas.length; j++) {
+                if (tablero.casillas[i][j] != null) {
+                    System.out.print(tablero.casillas[i][j].pintarPieza() + " ");
+                } else {
+                    System.out.print("\u2003 ");
+                }
+            }
+            System.out.println("|");
         }
-    
+        System.out.println("   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯");
+
     }
+    /**
+     * Preguntará al usuario el movimiento que quiere hacer (su jugada) y eso hará que se genere un movimiento.
+     * @param jugada El usuario solo puede introducir una juegada de esta forma "A1B1" donde las letras son las
+     * columnas del movimiento, y los números las filas del movimiento generado. Si la jugada genera un movimiento no válido, le debe 
+     * preguntar de nuevo por el movimiento que desea introducir.
+     * @param tablero 
+     * @return 
+     */
+//    public Movimiento meterJugada(String jugada, Tablero tablero){
+//        System.out.println("Introduce la jugada: ");
+//        return 77;
+//    }
     
+    
+    
+    @Override
+    public String toString(){
+        String color;
+        if(turno == 0 )
+            color = " BLANCAS";
+        else
+            color = " NEGRAS";
+        return "Es el turno de" + color;
+    }
 }

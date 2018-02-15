@@ -42,6 +42,7 @@ public class Movimiento {
 
     // metodos
     public boolean esVertical() {
+
         return true;
     }
 
