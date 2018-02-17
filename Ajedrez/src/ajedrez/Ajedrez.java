@@ -5,6 +5,8 @@
  */
 package ajedrez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dam1
@@ -16,26 +18,45 @@ public class Ajedrez {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
+
         Juego j1 = new Juego();
         j1.comenzarJuego();
         System.out.println(j1.toString());
-        
+
         // pruebas con tablero
         Tablero p4 = new Tablero();
         System.out.println(p4.hayPieza(5, 5));
         p4.ponerPieza(new Caballo(), 5, 5);
-        
-        Posicion posicionTest = new Posicion(2,3);
-        p4.ponerPieza(new Dama("negra"), posicionTest);
-        j1.pintaMe(p4);
-        System.out.println(p4.buscarPieza(0,0).pintarPieza());
-        System.out.println(p4.buscarPieza(0,0));
-        System.out.println(p4.buscarPieza(7,4));  //los nombres salen con null en todas menos caballo y reina WHY
-        System.out.println(p4.buscarPieza(posicionTest));
-        
 
+        Posicion posicionTest = new Posicion(2, 3);
+        Posicion posicionDos = new Posicion(0, 0);
+        Posicion posicionReina = new Posicion(4, 4);
+        p4.ponerPieza(new Dama("negra"), posicionReina); //Probando a meter fichas random
+        j1.pintaMe(p4);
+        System.out.println(p4.buscarPieza(0, 0).pintarPieza());
+        System.out.println(p4.buscarPieza(0, 0));
+        System.out.println(p4.buscarPieza(7, 4));  //los nombres salen con null en todas menos caballo y reina WHY
+        System.out.println(p4.buscarPieza(posicionTest));
+
+        Movimiento movi = new Movimiento(posicionDos, posicionTest); //creando un movimiento
+        p4.hacerMovimiento(movi);
+        j1.pintaMe(p4);
+
+        //pruebas strings
+//        Scanner lector = new Scanner(System.in);
+//        System.out.println("Introduce la jugada:");
+//        int c1, f1, c2, f2;
+//        String jugadaUsuario = lector.next();
+//        c1 = jugadaUsuario.toUpperCase().charAt(0)-65;
+//        f1 = jugadaUsuario.toUpperCase().charAt(1)-49;
+//        c2 = jugadaUsuario.toUpperCase().charAt(2)-65;
+//        f2 = jugadaUsuario.toUpperCase().charAt(3)-49;
+//        System.out.println(c1);
+//        System.out.println(f1);
+//        System.out.println(c2);
+//        System.out.println(f2);
+        Movimiento vamoaver = new Movimiento();
+        
     }
-    
+
 }

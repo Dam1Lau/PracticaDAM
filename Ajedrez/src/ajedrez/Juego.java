@@ -5,6 +5,8 @@
  */
 package ajedrez;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dam1
@@ -69,10 +71,27 @@ public class Juego {
      * @param tablero 
      * @return 
      */
-//    public Movimiento meterJugada(String jugada, Tablero tablero){
-//        System.out.println("Introduce la jugada: ");
-//        return 77;
-//    }
+    public Movimiento meterJugada(String jugada, Tablero tablero){  //ESTE ES IGUAL QUE EL PRIMERO QUE HICE EN EL CONSTRUCTOR DE MOVIMIENTO D:
+        boolean noValido = true;
+        Movimiento movi=null;
+        Scanner lector = new Scanner(System.in);
+        while (noValido == true) {
+            if(jugada.length()!=4)
+                System.out.println("Jugada inválida, introduce una jugada de cuatro caracteres en éste orden: A1C2");
+            else if(jugada.toUpperCase().charAt(0)<'A' || jugada.toUpperCase().charAt(0)> 'H' || jugada.toUpperCase().charAt(2)<'A' || jugada.toUpperCase().charAt(2)>'H')
+                System.out.println("Jugada incorrecta. Ha introducido una letra inválida o en posición errónea.");
+            else if(jugada.charAt(1)<'1' || jugada.charAt(1)>'8' || jugada.charAt(3)<'1' || jugada.charAt(3)>'8')
+                System.out.println("Jugada incorrecta. Ha introducido un número inválido o en posición incorrecta.");
+            else{
+                Posicion ini = new Posicion(jugada.toUpperCase().charAt(0)- 65,jugada.toUpperCase().charAt(1) - 49);
+                movi.setPosInicial(ini);
+                Posicion fin = new Posicion(jugada.toUpperCase().charAt(2) - 65,jugada.toUpperCase().charAt(3) - 49);
+                movi.setPosFinal(fin);
+                noValido = false;
+            }
+        }
+        return movi;
+    }
     
     
     

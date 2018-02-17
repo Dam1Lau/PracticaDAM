@@ -107,7 +107,10 @@ public class Tablero {
     }
 
     public void hacerMovimiento(Movimiento movimiento) {
-        //si es valido, esto aun no esta hecho - AÑADIR!
+        //si es valido, esto aun no esta hecho - AÑADIR! Cosas necesarias para que pueda moverle:
+        // Que el tipo de movimiento sea válido para esa pieza.
+        // Que sea mi turno.
+        //Que si es mi turno y hay una pieza del otro color pueda comerla. Y si es de mi color no.
         Piezas aux = casillas[movimiento.getPosInicial().getFila()][movimiento.getPosInicial().getColumna()];
         
         quitarPieza(movimiento.getPosInicial().getFila(),movimiento.getPosInicial().getColumna());
