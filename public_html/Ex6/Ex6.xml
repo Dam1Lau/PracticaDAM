@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style6.xsl"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<PAGE>
+    <HEADING>page heading</HEADING>
+    <ARTICLE>
+        <TITLE>article title</TITLE>
+        <DESCRIPTION>article description</DESCRIPTION>
+    </ARTICLE>
+    <ASIDE>
+        <TITLE>side widget bar</TITLE>
+        <ITEM>sidebar item</ITEM>
+    </ASIDE>
+    <FOOTER>page footer</FOOTER>
+</PAGE>
